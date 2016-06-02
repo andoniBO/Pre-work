@@ -1,0 +1,192 @@
+Gemas
+
+RSpec => Gema de testeo
+
+El metodo Struct (se escribe como una herencia) te inicializa las variables que sean a variables con su mismo nombre
+
+ruby <nombredelfichero>
+Ejecuta el fichero
+
+puts ""
+Imprime por pantalla haciendo salto de linea lo contenido en las comillas
+
+print ""
+Imprime por pantalla sin hacer salto de linea lo contenido en las comillas
+
+#<lo que sea>
+Comentario
+
+Variables:
+Para declarar una variable se pone su nombre y se le asigna un valor
+Siempre minusculas y sustituyendo los espacios por _
+La funcion .class nos indica su tipo de dato
+Ejemplos:
+my_variable = 10
+my_other_variable = “ten”
+
+Strings:
+Las comillas dobles (") permiten:
+-Usar \ (p.ej. \n para un salto de linea)
+-Interpolar valores dentro de un string (i.e. #{variable})
+Funciones:
+.capitalize - Convierte la primera letra en mayuscula
+.split('<lo que sea>') - Convierte el string en un array con los strings resultantes dividido por <lo que sea>
+.length - devuelve el numero de caracteres en un string
+.include '<lo que sea>' - comprueba si algo esta contenido en el string
+
+Integer
+Numeros enteros
+En numeros grandes, se pueden sustituir las comas (i.e. 1,000) por barra baja para facilitar su lectura, ruby las ignorara (i.e. 1_000)
+Pueden ser:
+-Fixnum (numeros pequeños)
+-Bignum (numeros mayores)
+Funciones:
+.odd? - Comprueba si el numero es impar
+.false? - Comprueba si el numero es par
+.round (<digito al que redondeara>) - sirve para redondear al digito deseado
+	ejemplo:
+		age = 28
+		age.round(-1) # returns 30
+		age.round(1) # returns 28.0
+<numero>.times {<lo que sea>} - ejecuta un codigo las veces que se le indique
+
+Float
+Decimales
+
+Array
+Ejemplo:
+animales = ['leones', 'tigres', 'osos']
+Almacena cualquier tipo de dato, pudiendo incluir varios distintos en un mismo array
+Funciones:
+<< "<lo que sea>" - añade elementos al array
+.push "<lo que sea>" - añade elementos al array
+.delete_at <indice de la matriz> - elimina elementos del array
+.sort - ordena la matriz de mayor a menor (si es un numero) y alfabeticamente (si es un string)
+.join - une el contenido del array en un string
+.join (', ') - une el contenido del array en un string
+.map permite editar el array mientras lo recorres
+
+Hash
+Lo mismo que un array, solo que en vez de tener un orden o indice, sus valores se asocian aun nombre (key)
+Ejemplo:
+my_hash = {}
+my_hash["AST"] = "Asturias"
+puts my_hash["AST"]
+Funciones:
+.has_key? ("<lo que sea>") - Comprueba si la tabla tiene una key concreta.
+.has_value? ("<lo que sea>") - Comprueba si la tabla tiene un valor concreto.
+.select - Crea una nueva tabla hash a partir de la que le mandamos que contenga las keys con sus valores correspondiente siempre y cuando cumplan la condicion
+	ejemplo:
+		my_hash.select { |key, value| key.include?("G") }
+ 		=> { "GAL" => "Galicia" }
+
+gets.chomp
+Lee el input del teclado como string
+
+gets.chomp.to_i
+Lee el input del teclado como integer
+
+IO class
+Contiene las funciones read/write que permiten acceder a archivos de su misma carpeta
+Ejemplo de lectura:
+file_contents = IO.read("ruby.rb")  
+Ejemplo de escritura:
+IO.write('name.txt', name)
+
+Operators
+==    equals
+>     greater than
+<     less than
+>=    equal to or greater than
+<=    equal to or less than
+&&    and 
+||    or
+!     not
+
+Conditionals
+if
+elsif
+else
+
+Loops
+for
+	Ejemplo:
+		numbers = [1,2,3]
+		for element in numbers
+			puts "-> #{element}"
+		end
+while
+	Ejemplo:
+		string = ""
+
+		# While the string's length is less than 10
+		while string.length < 10
+			# Add an 'a'
+			string = string + 'a'
+		end
+
+Metodos del modulo enumerable
+.grep(/<lo que sea>/) - busca los que contengan <lo que sea>
+.select - devuelve todos los que cumplen la condicion
+.find - devuelve el primero que cumpla la condicion
+.sort - ordena de menor a mayor(si no se le indica nada)
+.sort_by - ordena por el parametro indicado
+.each
+Se usa para recorrer arrays y tablas hash
+Ejemplo:
+numbers = [ "One", 2, "Three" ]
+numbers.each do |item|
+	puts "--> #{item}"
+end
+map
+Recorre un array /tabla hash retornando un valor
+Ejemplo:
+total = [1,2,3].map do |item|
+	item + 1
+end
+.each_with_index
+Se usa para recorrer arrays y tablas hash con un indice
+Ejemplo:
+numbers = [ "One", 2, "Three" ]
+numbers.each do |item,index|
+	if(index==2)
+		puts "--> #{item}"
+	end
+end
+
+Funciones
+Comienzan en def y terminan con end
+Tienen un nombre unico
+Siempre retornan un valor (la ultima linea de la funcion)
+Si la ultima linea es una llamada a otra funcion, retorna el valor de esta funcion
+Pueden retornar mas de un valor (i.e. return calc1, calc2, calc3)
+Es bueno usar return solo en caso de querer retornar algo antes de llegar a la ultima linea de la funcion
+Ejemplo de funcion:
+	def say_hello
+	  puts "Hello!"
+	end
+Se le pueden enviar argumentos
+Ejemplo:
+	def say_hello(name)
+	  puts "Hello, #{name}!"
+	end
+
+	say_hello("Rafa")
+Se pueden pasar expresiones como argumentos
+Ejemplo:
+	say_hello("James" + " Bond")
+	  => returns "Hello, James Bond"
+
+mixin
+En ruby no hay multi herencia pero si mixin
+Creamos modulos que luego llamamos con un include <nombre del modulo>
+podemos incluir tantos modulos como queramos
+Ejemplo
+module Payable
+	def receive_salary
+		#[...]
+	end
+end
+class Programmer < CaffeineConsumer
+	include Payable
+end

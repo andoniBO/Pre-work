@@ -1,0 +1,26 @@
+Requests:
+Son todas iguales (requests) pero se nombran distintas en cada situacion
+Example:
+GET /index.html HTTP/1.1
+GET
+can be cached
+remain in the browser history 
+can be bookmarked
+never be used for sensitive data
+have length restrictions
+should be used only to retrieve data
+POST
+never cached
+dont remain in browser history
+cant be bookmarked
+have no restrictions in data length
+PUT
+DELETE
+
+HTTP status ranges
+1xx: hold on
+2xx: here you go
+3xx: go away
+4xx: you fucked up
+5xx: I fucked up
+

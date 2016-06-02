@@ -1,0 +1,109 @@
+.left li, .right li{
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.left li{
+	text-align: left;
+}
+
+.right li{
+	text-align: right;
+}
+
+.left{
+	position: absolute;
+	text-align: left;
+	float: left;
+}
+
+.right{
+	text-align: right;
+	padding-right: 50px;
+	float: right;
+}
+
+.rightmic{
+	text-align: right;
+	padding-right: 10px;
+	float: right;
+	padding-top: 3px;
+}
+
+.googleImg{
+	margin: 100px auto 0px auto;
+	width: 500px;
+}
+
+.busqueda{
+	height: 40px;
+	width: 800px;
+	border-radius: 1px;
+	border: 1px solid black;
+	border-width: thin;
+	border-color: darkgrey;
+	margin: 25px auto;
+	left: 50%;
+}
+
+.botones{
+	padding-left: 150px;
+	width: 600px;
+	left: 50%;
+	margin: auto;
+}
+
+.boton{
+	height: 40px;
+	width: 200px;
+	background-color: lightgrey;
+	padding: 10px 50px;
+	border-radius: 1px;
+}
+
+.main{
+	padding-top: 300px;
+	min-width: 75%;
+	margin: -190px auto;
+	top: 50%;
+	height: auto;
+	min-height: 100%;
+	align: center;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+header{
+	height: 40px;
+	width: 100%;
+	background-color: white;
+	color: darkgrey;
+	font-size: 14px;
+	font-family: "Arial";
+	top: 50%;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	font-family: "Arial";
+}
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+footer{
+	height: 40px;
+	width: 100%;
+	background-color: lightgrey;
+	color: darkgrey;
+	font-size: 14px;
+	font-family: "Arial";
+	position: absolute;
+}

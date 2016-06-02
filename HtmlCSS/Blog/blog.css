@@ -1,0 +1,83 @@
+#finalParagraph {
+	background-color: green;
+	font-family: "Baskerville";
+}
+
+.postAuthor{
+	font-size: 20px;
+}
+
+.articleContainer{
+	background-color: white;
+}
+
+.niceParagraph {
+	background-color: white;
+	font-family: "Baskerville";
+}
+
+.centeredElement{
+	width: 50%;
+	margin: auto;
+}
+
+.floatedBox{
+	float: right;
+}
+
+.shadowedBox{
+	-webkit-box-shadow:10px 5px 5px #888888;
+	-moz-box-shadow:10px 5px 5px #888888;
+	box-shadow:10px 5px 5px #888888;
+}
+
+img{
+	width: 50px;
+	height: 50px;
+}
+
+header {
+	background-color: white;
+}
+
+body {
+	background-color: white;
+	font-family: "Serif";
+}
+
+article{
+	padding: 50px 10px;
+}
+
+footer p {
+	padding: 30px 10px;
+	border-top: 5px solid white;
+	background-color: dimgrey;
+	color: white;
+	font-size: 10px;
+	width: 100%;
+}
+
+footer a:link{
+	color: #FFFFFF;
+}
+
+footer a:visited{
+	color: #CCCCCC;
+}
+
+footer a:hover{
+	color: #999999;
+}
+
+nav a:link{
+	color: #FFFFFF;
+}
+
+nav a:visited{
+	color: #CCCCCC;
+}
+
+nav a:hover{
+	color: #999999;
+}

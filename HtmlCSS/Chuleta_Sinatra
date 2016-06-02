@@ -1,0 +1,5 @@
+Sinatra
+puerto habitual = 4567
+Si te sale que el puerto esta ocupado tienes un servidor montado
+Para cerrar el servidor:
+-HUP <id del proceso>
